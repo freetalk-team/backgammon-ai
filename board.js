@@ -259,34 +259,13 @@ export default class Backgammon {
 		//canvas.height = h;
 
 		drawEmptyBoard();
-		// drawWatermark('www.sipme.io');
-		// drawWatermark('w'+'w'+'w'+'.'+'s'+'i'+'p'+'m'+'e'+'.'+'i'+'o');
-		drawWatermark(['w','w','w','.','s','i' ,'p','m','e','.','i','o'].join(''));
 		drawPoints();
 		drawCheckersOnTheBar();
 		drawCheckersBearedOff();
 		drawCube(Cube);
 		drawRest();
 
-		function drawWatermark(text) {
-			ctx.save();
-			//ctx.translate(btn.x, btn.y);
-			//ctx.rotate(angle);
-
-			const s = w / 50
-				, x = w / 10
-				, y = h - s * .7
-				;
-			
-			
-			ctx.fillStyle = '#fff8';
-			ctx.textBaseline = "middle";
-			ctx.textAlign = "center";
-			ctx.font = "bold " + `${s}px` + " monospace";
-			ctx.fillText(text, x, y);
-			ctx.restore();
-		}
-		
+		// draw functions
 		function drawEmptyBoard() {
 			// draw board frame
 			ctx.save();
@@ -307,6 +286,8 @@ export default class Backgammon {
 			  drawTriangle(27 + i*3, 48, 3, 20, (i+1)%2); //bottom right triangs
 			}
 			ctx.restore();
+
+			drawWatermark('www.sipme.io');
 		
 			function drawTriangle(startx, starty, width, height, color) {
 				var peak;
@@ -320,6 +301,24 @@ export default class Backgammon {
 				ctx.strokeStyle = triangleBorderColor;
 				ctx.fill();
 				ctx.stroke();
+				ctx.restore();
+			}
+			function drawWatermark(text) {
+				ctx.save();
+				//ctx.translate(btn.x, btn.y);
+				//ctx.rotate(angle);
+
+				const s = w / 50
+					, x = w / 10
+					, y = h - s * .7
+					;
+				
+				
+				ctx.fillStyle = '#fff8';
+				ctx.textBaseline = "middle";
+				ctx.textAlign = "center";
+				ctx.font = "bold " + `${s}px` + " monospace";
+				ctx.fillText(text, x, y);
 				ctx.restore();
 			}
 		}

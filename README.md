@@ -38,6 +38,10 @@ npm install -g webpack
 npm run build
 ```
 
+## Demo
+
+[Start new game](https://www.sipme.io/backgammon)
+
 ## Donation
 
 We hope you've found our software useful. As a non-profit organization, we rely on the generosity of people like you to continue our mission of creating free/OS software

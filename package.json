@@ -1,0 +1,31 @@
+{
+  "name": "backgammon-ai",
+  "version": "1.0",
+  "description": "Backgammon game for browsers",
+  "repository": "https://github.com/freetalk-team/backgammon-ai",
+  "contributors": [
+    "Pavel Patarinski <pavelp.work@gmail.com>"
+  ],
+  "main": "server.js",
+  "directories": {
+    "doc": "doc",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "build": "webpack"
+  },
+  "keywords": [
+    "backgammon",
+    "game",
+    "web",
+    "javascript"
+  ],
+  "author": "Freetalk Team",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "morgan": "^1.10.0"
+  }
+}
